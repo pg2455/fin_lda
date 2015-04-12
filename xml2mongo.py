@@ -93,7 +93,7 @@ def getIndexingSections(root):
       d['general_online_descriptor'] = [x.text for x in root.xpath('.//*[@class="online_producer" and @type="general_descriptor"]')]
       d['taxonomic_classifier'] = [x.text for x in root.xpath('.//*[@class="online_producer" and @type="taxonomic_classifier"]')]
       d['types_of_material'] = [x.text for x in root.xpath('.//*[@class="online_producer" and @type="types_of_material"]')]
-      d['feature_page'] = [x.text for x in root.xpath('.//*[@name="feature_page"]/@content')]
+      d['feature_page'] = root.xpath('.//*[@name="feature_page"]/@content')
       d['online_section'] = root.xpath('.//*[@name="online_sections"]/@content')
   return dict(d)
 
