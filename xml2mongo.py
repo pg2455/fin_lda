@@ -14,7 +14,7 @@ class getInfo(object):
     self.path, self.index_fields = dir_path, set([]) # path : path to find unzipped corpus folder
     logger.info("Storing metadata of articles in mongodb @database = articles @collection = collection_1")
     #conn = pymongo.Connection
-    self.data = pymongo.Connection().articles.collection_1
+    self.data = pymongo.Connection().articles.collection_2
     self.improper = open('improper_files.log', 'w')
 
   def enterInfo(self):
